@@ -1,19 +1,9 @@
-# Dependencias y builds
 node_modules/
 dist/
 .astro/
 .wrangler/
-.vercel/
-.output/
-
-# Secretos y variables de entorno
 .env
 .env.*
 !.env.example
 .dev.vars
-
-# Sistema y editores
 .DS_Store
-.idea/
-.vscode/
-*.log
