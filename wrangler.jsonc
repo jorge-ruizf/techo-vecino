@@ -6,6 +6,11 @@
     "directory": "./dist"
   }
 
+  // El código del servidor vive en dist/_worker.js/ (dentro de dist/). Para que wrangler
+  // NO lo suba como asset público, existe public/.assetsignore (copiado a dist/.assetsignore
+  // por el build) que excluye "_worker.js". El worker se sirve solo desde "main"; el resto
+  // de dist/ son assets estáticos.
+  //
   // Variables de entorno: definir al desplegar, SIN valores en este archivo.
   //   Público (no sensible):  "vars": { "PUBLIC_SUPABASE_URL": "...", "PUBLIC_SUPABASE_ANON_KEY": "..." }
   //   Secretos (solo servidor): wrangler secret put SUPABASE_SERVICE_ROLE_KEY / ADMIN_EMAIL / WHATSAPP_NUMBER
